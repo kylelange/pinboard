@@ -1,10 +1,88 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
 /*Universal Selectors****************/
-
-
+body {
+  background-image: url('../img/cork-board.jpg');
+}
 
 /*Class Selectors********************/
+.polaroid-tile {
+  /*text-align: center;*/
+  position: relative;
+  top: 100px;
+  left: 100px;
+  transform: rotate(5deg);
+  width: 600px;
+  height: auto;
+}
 
+.polaroid-tile img:first-child {
+  position: absolute;
+  width: 472.5px;
+  height: auto;
+}
 
+.polaroid-tile img:last-child {
+  position: absolute;
+  top: 55px;
+  left: 65px;
+  z-index: -1;
+  width: 323px;
+  height: 324px;
+  object-fit: cover;
+  /*text-align: center;*/
+}
+
+.polaroid-tile::before {
+  content: url('../img/red-pin.png');
+  position: absolute;
+  transform: scale(.25);
+  margin-top: -115px;
+  margin-left: -105px;
+  z-index: 1;
+}
+
+.polaroid-tile2 {
+  /*text-align: center;*/
+  position: relative;
+  top: 500px;
+  left: 500px;
+  transform: rotate(-15deg);
+  width: 600px;
+  height: auto;
+}
+
+.polaroid-tile2 img:first-child {
+  position: absolute;
+  width: 472.5px;
+  height: auto;
+}
+
+.polaroid-tile2 img:last-child {
+  position: absolute;
+  top: 55px;
+  left: 65px;
+  z-index: -1;
+  width: 323px;
+  height: 324px;
+  object-fit: cover;
+  /*text-align: center;*/
+}
+
+.polaroid-tile2::before {
+  content: url('../img/red-pin.png');
+  position: absolute;
+  transform: scale(.25) rotate(50deg);
+  filter: hue-rotate(110deg);
+  margin-top: -125px;
+  margin-left: 250px;
+  z-index: 1;
+}
 
 /*Id Selectors***********************/
 
